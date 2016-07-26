@@ -1,28 +1,16 @@
 # Middleman::Renderers::QiitaTemplate
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/middleman/renderers/qiita_template`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'middleman-renderers-qiita_template'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install middleman-renderers-qiita_template
+[Qiita::Markdown](https://github.com/increments/qiita-markdown) for [Middleman](https://middlemanapp.com/)
 
 ## Usage
+Add `gem 'middleman-renderers-qiita_template'` into your `Gemfile`
 
-TODO: Write usage instructions here
+Set options in `config.rb`:
+
+```rb
+set :markdown_engine_prefix, Middleman::Renderers
+set :markdown_engine, :qiita
+```
 
 ## Development
 
@@ -32,5 +20,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/middleman-renderers-qiita_template.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/nownabe/middleman-renderers-qiita_template.

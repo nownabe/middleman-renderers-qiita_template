@@ -25,7 +25,7 @@ module Tilt
 
     def context
       # @options[:context] || {}
-      {}
+      { script: true }
     end
 
     def filters

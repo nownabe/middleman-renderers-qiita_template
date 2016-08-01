@@ -6,7 +6,7 @@ require "tilt/qiita_template"
 module Middleman
   module Renderers
     class QiitaTemplate < ::Tilt::QiitaTemplate
-      VERSION = "0.1.0"
+      VERSION = "0.1.1"
     end
 
     ::Tilt.register QiitaTemplate, "markdown", "mkd", "md"

@@ -12,6 +12,22 @@ set :markdown_engine_prefix, Middleman::Renderers
 set :markdown_engine, :qiita
 ```
 
+To set options for Qiita::Markdown, use `set :markdown`
+
+```rb
+set :markdown,
+  option_context: {
+    hostname: "foo.github.io",
+    script: true
+  },
+  filters: [
+    Qiita::Markdown::Filters::Greenmat,
+    Qiita::Markdown::Filters::Emoji,
+    Qiita::Markdown::Filters::SyntaxHighlight,
+    Qiita::Markdown::Filters::Sanitize,
+  ]
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

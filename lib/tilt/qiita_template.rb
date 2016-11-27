@@ -13,6 +13,7 @@ module Tilt
 
     def prepare
       @engine = Qiita::Markdown::Processor.new(context)
+      @engine.filters.clear
       @engine.filters.concat(filters)
       @output = nil
     end
@@ -24,12 +25,11 @@ module Tilt
     private
 
     def context
-      # @options[:context] || {}
-      { script: true }
+      @options[:option_context] || {}
     end
 
     def filters
-      @options[:filters] || []
+      @options[:filters] || Qiita::Markdown::Processor.default_filters
     end
   end
 end
